@@ -144,10 +144,12 @@
     <ClInclude Include="model.h" />
     <ClInclude Include="tgaimage.h" />
     <ClInclude Include="transformer.h" />
+    <ClInclude Include="Translation.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Tool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="exam.cpp" />
     <ClCompile Include="geometry.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="model.cpp" />

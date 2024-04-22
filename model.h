@@ -2,7 +2,7 @@
 #include <string>
 #include "geometry.h"
 #include "tgaimage.h"
-
+#pragma once
 class Model {
     std::vector<vec3> verts{};     // array of vertices
     std::vector<vec2> tex_coord{}; // per-vertex array of tex coords

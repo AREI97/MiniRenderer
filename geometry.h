@@ -80,13 +80,23 @@ template<> struct vec<3> {
     double norm2() const { return *this * *this; }
     double norm()  const { return std::sqrt(norm2()); }
     vec<3> normalized() { return (*this)/norm(); }
-    vec(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
+};
+
+template<> struct vec<4> {
+    double x = 0, y = 0, z = 0,chi = 0;
+    double& operator[](const int i) { assert(i >= 0 && i < 4); return i ? (1 == i ? y : (2 == i?z:chi)) : x; }
+    double  operator[](const int i) const { assert(i >= 0 && i < 4);return i ? (1 == i ? y : (2 == i ? z : chi)) : x;
+    }
+    double norm2() const { return *this * *this; }
+    double norm()  const { return std::sqrt(norm2()); }
+    vec<4> normalized() { return (*this) / norm(); }
 };
 
 typedef vec<2> vec2;
 typedef vec<3> vec3;
-typedef vec<4> vec4;
+
 vec3 cross(const vec3 &v1, const vec3 &v2);
+
 
 template<int n> struct dt;
 

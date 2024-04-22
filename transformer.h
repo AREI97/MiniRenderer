@@ -1,4 +1,5 @@
 #pragma once
 #include "geometry.h"
 
-void world2screen(vec2& node, double width, double height);
+vec3 world2screen(vec3 node, double width, double height);
+vec3 screen2world(vec3 node, double width, double height);
